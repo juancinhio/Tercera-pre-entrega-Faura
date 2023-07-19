@@ -1,0 +1,27 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block BASE_CONTENIDO %}
+
+    <div class="row align-items-center my-5">
+        <h1 class="pb-lg-3 text-bg-light">
+            {% block INDEX_TITULO %}
+                Bienvenido!!!
+            {% endblock INDEX_TITULO %}
+        </h1>
+    </div>
+
+    {% block INDEX_CONTENIDO %}
+
+
+
+        <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+
+            {% include 'home/card.html' with card="Registrar nuevo auto"%}
+            {% include 'home/card.html' with card="Ver autos" %}
+            {% include 'home/card.html' with card="mas" %}
+        </div>
+    {% endblock INDEX_CONTENIDO %}
+
+{% endblock BASE_CONTENIDO %}
